@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+        <style type="text/css">
+            .cell {
+                display: inline-block;
+                height: 200px;
+                width: 200px;
+                background-color: green;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .purple {
+                background-color: purple;
+            }
+        </style>
+        <script>
+            var turn = "yellow";
+            $(document).ready(function() {
+               $('.cell').click(function() {
+                   $(this).addClass(turn);
+                   
+                   if(turn == "yellow") {
+                       turn = "purple";
+                   } else {
+                       turn = "yellow";
+                   }
+               });
+            });
+            
+        </script>
+    </head>
+    <body>
+        <div class="row">
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+       </div>
+       <div class="row">
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+       </div>
+       <div class="row">
+           <div class="cell"></div>
+           <div class="cell"></div>
+           <div class="cell"></div>
+       </div>
+    </body>
+</html>
